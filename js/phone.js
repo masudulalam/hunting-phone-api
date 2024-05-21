@@ -43,5 +43,13 @@ const handleSearch = () => {
     loadPhone(searchText);
 }
 
+// handle search2
+const handleSearch2 = () => {
+    const searchField = document.getElementById('search-field2');
+    const searchText = searchField.value;
+    console.log(searchText);
+    loadPhone(searchText);
+}
+
 
 // loadPhone();
