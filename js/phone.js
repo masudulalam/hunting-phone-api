@@ -59,12 +59,18 @@ const handleSearch = () => {
 
 // handle search2 recap
 const handleSearch2 = () => {
+    toggleSpinner ();
     const searchField2 = document.getElementById('search-field2');
     const searchText2 = searchField2.value;
     // console.log(searchText2); 
     loadPhone(searchText2);   
 }
 
+
+const toggleSpinner = () => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    loadingSpinner.classList.remove('hidden');
+}
 
 
 
