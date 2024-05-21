@@ -14,6 +14,15 @@ const displayPhones = phones => {
     // clear the phone container cards before adding new cards.
     phoneContainer.textContent = '';
 
+    // display show all button if there are more than 12 phones 
+    const showAllButtonContainer = document.getElementById('show-all-btn-container');
+    if (phones.length > 12) {
+        showAllButtonContainer.classList.remove('hidden');
+    }
+    else {
+        showAllButtonContainer.classList.add('hidden');
+    }
+
     // display first 12 phones
     phones = phones.slice(0, 12);
 
