@@ -16,7 +16,7 @@ const displayPhones = (phones, isShowAll) => {
 
     // display show all button if there are more than 12 phones 
     const showAllButtonContainer = document.getElementById('show-all-btn-container');
-    if (phones.length > 12) {
+    if (phones.length > 12 && !isShowAll) {
         showAllButtonContainer.classList.remove('hidden');
     }
     else {
