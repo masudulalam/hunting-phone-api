@@ -3,7 +3,7 @@ const loadPhone = async (searchText, isShowAll) => {
     const data = await res.json();
     const phones = data.data;
     // console.log(phones);
-    displayPhones(phones);
+    displayPhones(phones, isShowAll);
 }
 
 const displayPhones = phones => {
