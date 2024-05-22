@@ -81,5 +81,11 @@ const toggleLoadingSpinner = (isLoading) => {
 }
 
 
+// handle show all
+const handleShowAll = () => {
+    console.log('handle show all');
+}
+
+
 
 // loadPhone();
