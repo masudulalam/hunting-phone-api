@@ -6,7 +6,7 @@ const loadPhone = async (searchText, isShowAll) => {
     displayPhones(phones, isShowAll);
 }
 
-const displayPhones = phones => {
+const displayPhones = (phones, isShowAll) => {
     // console.log(phones);
 
     // step 1: display the data there is the place 
@@ -23,8 +23,12 @@ const displayPhones = phones => {
         showAllButtonContainer.classList.add('hidden');
     }
 
-    // display first 12 phones
-    phones = phones.slice(0, 12);
+    console.log('is Show All: ', isShowAll);
+
+    // display first 12 phones if not show all
+    if(!isShowAll) {
+        phones = phones.slice(0, 12);
+    }
 
     phones.forEach(phone => {
         console.log(phone);
