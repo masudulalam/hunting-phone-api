@@ -57,7 +57,7 @@ const handleSearch = (isShowAll) => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // console.log(searchText); 
-    loadPhone(searchText);
+    loadPhone(searchText, isShowAll);
 }
 
 // handle search2 recap
