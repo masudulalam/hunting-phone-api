@@ -52,11 +52,11 @@ const displayPhones = phones => {
 
 
 // handle search
-const handleSearch = () => {
+const handleSearch = (isShowAll) => {
     toggleLoadingSpinner (true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
-    console.log(searchText); 
+    // console.log(searchText); 
     loadPhone(searchText);
 }
 
@@ -83,7 +83,7 @@ const toggleLoadingSpinner = (isLoading) => {
 
 // handle show all
 const handleShowAll = () => {
-    console.log('handle show all');
+    handleSearch(true);
 }
 
 
