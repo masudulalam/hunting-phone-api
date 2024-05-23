@@ -76,8 +76,8 @@ const showPhoneDetails = (phone) => {
     showDetailsContainer.innerHTML = `
         <img src="${phone.image}" alt="Phone Image">   
         <p><span>Storage:</span>${phone?.mainFeatures?.storage}</p> 
-        <p><span>Display Size:</span>${phone?.mainFeatures?.displaySize
-        }</p> 
+        <p><span>Display Size:</span>${phone?.mainFeatures?.displaySize}</p> 
+        <p><span>ChipSet:</span>${phone?.mainFeatures?.chipSet}</p> 
 
 
     `
