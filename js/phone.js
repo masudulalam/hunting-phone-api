@@ -79,7 +79,7 @@ const showPhoneDetails = (phone) => {
         <p><span>Display Size:</span>${phone?.mainFeatures?.displaySize}</p> 
         <p><span>ChipSet:</span>${phone?.mainFeatures?.chipSet}</p> 
         <p><span>Slug:</span>${phone?.slug}</p> 
-
+        <p><span>Release:</span>${phone?.releaseDate}</p> 
 
     `
 
