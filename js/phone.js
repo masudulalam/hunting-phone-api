@@ -7,10 +7,10 @@ const loadPhone = async (searchText, isShowAll) => {
 }
 
 const displayPhones = (phones, isShowAll) => {
-    console.log(phones);
+    // console.log(phones);
 
     // step 1: display the data there is the place 
-    const phoneContainer  = document.getElementById('phone-container');
+    const phoneContainer = document.getElementById('phone-container');
     // clear the phone container cards before adding new cards.
     phoneContainer.textContent = '';
 
@@ -23,15 +23,15 @@ const displayPhones = (phones, isShowAll) => {
         showAllButtonContainer.classList.add('hidden');
     }
 
-    console.log('is Show All: ', isShowAll);
+    // console.log('is Show All: ', isShowAll);
 
     // display first 12 phones if not show all
-    if(!isShowAll) {
+    if (!isShowAll) {
         phones = phones.slice(0, 12);
     }
 
     phones.forEach(phone => {
-        console.log(phone);
+        // console.log(phone);
         // step 2: create a div
         const phoneCard = document.createElement('div');
         phoneCard.classList = `card bg-gray-100 shadow-xl pt-7`;
@@ -56,17 +56,29 @@ const displayPhones = (phones, isShowAll) => {
 
 // Show Details
 const handleShowDetail = async (id) => {
-    console.log('clicked details', id);
+    // console.log('clicked details', id);
     // load single phone data
     const res = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const data = await res.json();
-    console.log(data);  
+    // console.log(data);
+    const phone = data.data;
+
+
+    showPhoneDetails(phone);
+}
+
+// show phone details
+const showPhoneDetails = (phone) => {
+    console.log(phone);
+
+    // show the modal
+    show_details_modal.showModal();
 }
 
 
 // handle search
 const handleSearch = (isShowAll) => {
-    toggleLoadingSpinner (true);
+    toggleLoadingSpinner(true);
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     // console.log(searchText); 
