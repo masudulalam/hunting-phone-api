@@ -80,7 +80,7 @@ const showPhoneDetails = (phone) => {
         <p><span>ChipSet:</span>${phone?.mainFeatures?.chipSet}</p> 
         <p><span>Slug:</span>${phone?.slug}</p> 
         <p><span>Release:</span>${phone?.releaseDate}</p> 
-        <p><span>Brand:</span>${phone?.brand}</p> 
+        <p><span>brand:</span>${phone?.brand}</p> 
 
     `
 
