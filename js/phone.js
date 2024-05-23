@@ -78,7 +78,7 @@ const showPhoneDetails = (phone) => {
         <p><span>Storage:</span>${phone?.mainFeatures?.storage}</p> 
         <p><span>Display Size:</span>${phone?.mainFeatures?.displaySize}</p> 
         <p><span>ChipSet:</span>${phone?.mainFeatures?.chipSet}</p> 
-        <p><span>Memory:</span>${phone?.mainFeatures?.memory}</p> 
+        <p><span>Slug:</span>${phone?.slug}</p> 
 
 
     `
