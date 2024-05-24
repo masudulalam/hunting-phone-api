@@ -75,13 +75,13 @@ const showPhoneDetails = (phone) => {
     const showDetailsContainer = document.getElementById('show-details-container'); 
     showDetailsContainer.innerHTML = `
         <img src="${phone.image}" alt="Phone Image">   
-        <p><span>Storage:</span>${phone?.mainFeatures?.storage}</p> 
-        <p><span>Display Size:</span>${phone?.mainFeatures?.displaySize}</p> 
-        <p><span>ChipSet:</span>${phone?.mainFeatures?.chipSet}</p> 
-        <p><span>Slug:</span>${phone?.slug}</p> 
-        <p><span>Release:</span>${phone?.releaseDate}</p> 
-        <p><span>Brand:</span>${phone?.brand}</p> 
-        <p><span>GPS:</span>${phone?.others.GPS}</p> 
+        <p><span>Storage:</span>${phone.mainFeatures?.storage}</p> 
+        <p><span>Display Size:</span>${phone.mainFeatures?.displaySize}</p> 
+        <p><span>ChipSet:</span>${phone.mainFeatures?.chipSet}</p> 
+        <p><span>Slug:</span>${phone.slug}</p> 
+        <p><span>Release:</span>${phone.releaseDate}</p> 
+        <p><span>Brand:</span>${phone.brand}</p> 
+        <p><span>GPS:</span>${phone.others?.GPS || 'No GPS available'}</p> 
 
     `
 
