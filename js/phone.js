@@ -82,6 +82,8 @@ const showPhoneDetails = (phone) => {
         <p><span>Release:</span>${phone.releaseDate}</p> 
         <p><span>Brand:</span>${phone.brand}</p> 
         <p><span>GPS:</span>${phone.others?.GPS || 'No GPS available'}</p> 
+        
+        <p><span>GPS:</span>${phone.others?.GPS ? phone.others.GPS : 'No GPS available in this device'}<p> 
 
     `
 
